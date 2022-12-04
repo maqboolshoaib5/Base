@@ -1,0 +1,34 @@
+{
+	"name": "input_shippers",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "inputNW"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "ShipperID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CompanyName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Phone",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Shippers"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

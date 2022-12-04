@@ -1,0 +1,30 @@
+{
+	"name": "input_employee_territories",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "inputNW"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "EmployeeID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "TerritoryID",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "EmployeeTerritories"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

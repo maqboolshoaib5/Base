@@ -1,0 +1,29 @@
+{
+	"name": "input_CCDemo",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "inputNW"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "CustomerID",
+				"type": "nchar"
+			},
+			{
+				"name": "CustomerTypeID",
+				"type": "nchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "CustomerCustomerDemo"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

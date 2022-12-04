@@ -1,0 +1,29 @@
+{
+	"name": "tumWinTrigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipeline": {
+			"pipelineReference": {
+				"referenceName": "copyPL",
+				"type": "PipelineReference"
+			},
+			"parameters": {
+				"date": "@trigger().outputs.windowStartTime"
+			}
+		},
+		"type": "TumblingWindowTrigger",
+		"typeProperties": {
+			"frequency": "Hour",
+			"interval": 24,
+			"startTime": "1998-02-25T23:59:00Z",
+			"endTime": "1998-02-28T23:59:00Z",
+			"delay": "00:00:00",
+			"maxConcurrency": 50,
+			"retryPolicy": {
+				"intervalInSeconds": 30
+			},
+			"dependsOn": []
+		}
+	}
+}

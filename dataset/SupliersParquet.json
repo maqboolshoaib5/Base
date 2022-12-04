@@ -1,0 +1,38 @@
+{
+	"name": "SupliersParquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"year_p": {
+				"type": "int"
+			},
+			"month_p": {
+				"type": "int"
+			},
+			"day_p": {
+				"type": "int"
+			}
+		},
+		"folder": {
+			"name": "prepareNW"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@concat('prep/sup/year=',string(dataset().year_p),'/month=',string(dataset().month_p),'/day=',string(dataset().day_p))",
+					"type": "Expression"
+				},
+				"fileSystem": "dataset"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "input_custDemographies",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "inputNW"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "CustomerTypeID",
+				"type": "nchar"
+			},
+			{
+				"name": "CustomerDesc",
+				"type": "ntext"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "CustomerDemographics"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,9 @@
+{
+	"name": "myDF2022",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "3a06fcfc-88f3-47a9-8e9c-f16f08383914",
+		"tenantId": "4b64fbf9-d79c-433c-946f-834820f7d8d6"
+	}
+}
